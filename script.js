@@ -1,4 +1,4 @@
-const countDate = new Date("Jun 8 2023 00:00:00").getTime();
+const countDate = new Date("oct 20 2023 00:00:00").getTime();
 
 var x = setInterval(function(){
     let now = new Date().getTime();
@@ -14,6 +14,6 @@ var x = setInterval(function(){
 
     if(distance < 0){
         clearInterval(x);
-        document.getElementById('timer').innerHTML = "Time's Up";
+        document.getElementById('timer').innerHTML = "Happy Durga Puja";
     }
 })
