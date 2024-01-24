@@ -1,8 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0%;
     padding: 0%;
-    
-    background-size: cover;
+    /* background-size: contain; */
 }
 
 #bgvideo {
@@ -15,19 +20,14 @@ body {
     min-height: 100%;
 }
 
-/*
-.container{
-    white-space: nowrap;
+
+.container {
+    word-wrap: break-word;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size : 40px;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 40px;
     text-align: center;
 }
- */
+
 #line {
     border: none;
     border-bottom: 1px solid white;
@@ -39,32 +39,41 @@ body {
 
 
 
-/* newwwwwwwwwwwwwwwww */
 .container {
+    /* border: 5px solid black; */
     font-size: calc(10px + 5vw);
     width: 100vw;
     height: 100vh;
     position: absolute;
-    border: 5px solid black;
+    padding: 4px;
 }
 
 .title {
     /* border: 5px solid rgb(207, 30, 30); */
-    /* width: 90vw; */
     display: flex;
     font-size: calc(20px + 3vw);
-    /* font-size: 20px; */
     color: white;
     display: flex;
     justify-content: center;
     font-weight: bold;
-    /* margin: 20px; */
     margin-top: 15vh;
-    /* margin-bottom: 0; */
     text-align: center;
-    /* font-size: 2em;  */
     overflow-wrap: break-word;
+    /* text-shadow: 2px 2px black; */
+}
 
+.description {
+    /* border: 5px solid rgb(207, 30, 30); */
+    display: flex;
+    font-size: calc(12px + 2vw);
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+    /* text-shadow: 2px 2px black; */
 }
 
 #timer {
@@ -74,10 +83,25 @@ body {
     display: flex;
     justify-content: center;
     color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px black;
 }
 
 .galaxy {
     /* border: 5px solid rgb(0, 224, 19); */
     width: 100vw;
     height: 100vh;
+}
+
+#bgpic {
+    z-index: -2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    /* min-height: 100%;  */
+    /* max-width: 100%; */
+    max-height: 100%;
+    /* width: auto; */
+    /* height: min-content; */
 }
