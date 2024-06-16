@@ -1,21 +1,33 @@
-const countDate = new Date("may 01 2026 00:00:00").getTime();
+const startDate  = new Date("oct 19 2022 00:00:00").getTime();
+const endDate  = new Date("may 01 2026 00:00:00").getTime();
 
-var x = setInterval(function () {
+setInterval(() => {
     let now = new Date().getTime();
 
-    let distance = countDate - now;
+    // Calculate time passed since the start date
+    let passedDistance = now - startDate;
+    let passedDays = Math.floor(passedDistance / (1000 * 60 * 60 * 24));
+    let passedHrs = Math.floor((passedDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let passedMin = Math.floor((passedDistance % (1000 * 60 * 60)) / (1000 * 60));
+    let passedSec = Math.floor((passedDistance % (1000 * 60)) / 1000);
 
-    var d = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var sec = Math.floor((distance % (1000 * 60)) / 1000);
+    // Calculate time left until the end date
+    let endDistance = endDate - now;
+    let endDays = Math.floor(endDistance / (1000 * 60 * 60 * 24));
+    let endHrs = Math.floor((endDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let endMin = Math.floor((endDistance % (1000 * 60 * 60)) / (1000 * 60));
+    let endSec = Math.floor((endDistance % (1000 * 60)) / 1000);
 
-    document.getElementById('timer').innerHTML = d + "d " + hrs + "h " + min + "m " + sec + "s ";
+    // Display the results
+    document.getElementById('passedtimer').innerHTML = `${passedDays}d ${passedHrs}h ${passedMin}m ${passedSec}s`;
+    document.getElementById('endtimer').innerHTML = `${endDays}d ${endHrs}h ${endMin}m ${endSec}s`;
 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById('timer').innerHTML = "Good Bye Friends";
-        document.getElementsByClassName('title')[0].innerHTML = "";
-        // document.getElementsByClassName('description').innerHTML = "Good Bye Friends";
-    }
-})
+    // if (Enddistance < 0) {
+    //     clearInterval(x);
+    //     document.getElementById('endtimer').innerHTML = "Good Bye Friends";
+    //     document.getElementsByClassName('title')[0].innerHTML = "";
+    //     // document.getElementsByClassName('description').innerHTML = "Good Bye Friends";
+    // }
+
+
+}, 1000);

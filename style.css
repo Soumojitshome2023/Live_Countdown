@@ -24,8 +24,13 @@ body {
 .container {
     word-wrap: break-word;
     color: white;
-    font-size: 40px;
+    /* font-size: 40px; */
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.329);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding: 4px;
 }
 
 #line {
@@ -36,22 +41,12 @@ body {
     margin-top: 5vh;
 }
 
-
-
-
-.container {
-    /* border: 5px solid black; */
-    font-size: calc(10px + 5vw);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    padding: 4px;
-}
-
 .title {
     /* border: 5px solid rgb(207, 30, 30); */
     display: flex;
     font-size: calc(20px + 3vw);
+    /* font-size: 50px; */
+    /* font-size: 20%; */
     color: white;
     display: flex;
     justify-content: center;
@@ -65,7 +60,8 @@ body {
 .description {
     /* border: 5px solid rgb(207, 30, 30); */
     display: flex;
-    font-size: calc(12px + 2vw);
+    font-size: calc(25px + 1vw);
+    /* font-size: 40px; */
     color: white;
     display: flex;
     justify-content: center;
@@ -76,10 +72,14 @@ body {
     /* text-shadow: 2px 2px black; */
 }
 
-#timer {
-    font-size: calc(25px + 3vw);
+#endtimer,
+#passedtimer {
+    /* font-size: calc(18px + 3vw); */
+    /* font-size: 40px; */
+    font-size: calc(35px + 1vw);
+    /* font-size: calc(15px + 3vw); */
     margin: auto;
-    margin-top: 6vh;
+    margin-top: 4px;
     display: flex;
     justify-content: center;
     color: white;
